@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <title>Börsenkurse</title>
+    </head>
+    <body class="bg-light">
+        <div class="bg-dark text-light text-center">
+            <h1>Börsenkurse</h1>
+            <p>
+                Hier können Sie <strong>einen</strong> Aktienkurse auswählen und anzeigen lassen.<br>
+            </p>
+        </div>
+        <!-- Auswahl -->
+        <div class="container">
+            <div class="form-group ">
+                <label for="exampleFormControlSelect2">Wählen Sie eine Aktiengesellschaft aus</label>
+                <select multiple class="form-control" id="selection"></select>
+                <br>
+                <div class="container">
+                    <p>Ab wann soll der Kurs angegeben werden?</p>
+                    <input type="date" id="date" value="1970-01-01">
+                    <p>Bis wann?</p>
+                    <input type="date" id="dateEnd" value="1970-01-01">
+                    <input type="button" value="Bestätigen" onclick="selectCorporation()">
+                </div>
+                <br>
+                <hr>
+            </div>
+        </div>
+
+        <div class="container" id="ausgabeChart">
+            <h3 class="d-none" id="ausgabeChartText">Grafische Darstellung des Verlaufs</h3>
+            <canvas id="myChart" width="500" height="250"></canvas>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
+        <script src="assets/js/script.js"></script>
+    </body>
+</html>
